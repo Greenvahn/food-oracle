@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar type="dark" variant="primary" class="flex-column">
-      <b-navbar-brand href="#" class="mx-auto">
+      <b-navbar-brand href="/" class="mx-auto">
         MEAL PLANNER
       </b-navbar-brand>
       <b-nav>
