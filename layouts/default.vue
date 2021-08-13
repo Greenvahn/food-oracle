@@ -15,5 +15,6 @@ export default {
 </script>
 
 <style>
-@import "bootswatch\dist\sandstone\bootstrap.min.css";
+/* Loads bootswatch them here */
+@import 'bootswatch\dist\zephyr\bootstrap.min.css';
 </style>

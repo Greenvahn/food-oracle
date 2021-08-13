@@ -1,10 +1,28 @@
 <template>
   <div>
-    <b-navbar type="dark" variant="primary" class="flex-column">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <b-navbar-brand href="/" class="mx-auto">
         MEAL PLANNER
       </b-navbar-brand>
-      <b-nav>
+
+      <div id="navbarColor02">
+        <b-nav>
+          <b-nav-item active>
+            Active
+          </b-nav-item>
+          <b-nav-item>Link</b-nav-item>
+          <b-nav-item>Another Link</b-nav-item>
+          <b-nav-item disabled>
+            Disabled
+          </b-nav-item>
+        </b-nav>
+      </div>
+    </nav> -->
+    <b-navbar type="dark" variant="dark" class="flex-column navbar-dark bg-dark">
+      <b-navbar-brand href="/" class="mx-auto">
+        MEAL PLANNER
+      </b-navbar-brand>
+      <b-nav id="navbarColor02">
         <b-nav-item active>
           Active
         </b-nav-item>
@@ -19,8 +37,7 @@
 </template>
 
 <style scoped>
-/* .flex-column {
-  display: flex;
-  flex-direction: column;
-} */
+.nav-link:hover {
+  color: white;
+}
 </style>
