@@ -1,4 +1,4 @@
-# meal-dev
+# food-oracle
 
 ## Build Setup
 
