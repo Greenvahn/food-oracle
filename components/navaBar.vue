@@ -18,7 +18,11 @@
         </b-nav>
       </div>
     </nav> -->
-    <b-navbar type="dark" variant="dark" class="flex-column navbar-dark bg-dark">
+    <b-navbar
+      type="dark"
+      variant="dark"
+      class="flex-column navbar-dark bg-dark"
+    >
       <b-navbar-brand href="/" class="mx-auto">
         MEAL PLANNER
       </b-navbar-brand>
@@ -36,8 +40,10 @@
   </div>
 </template>
 
-<style scoped>
-.nav-link:hover {
-  color: white;
+<style lang="scss" scoped>
+.nav-link {
+  &:hover {
+    color: white;
+  }
 }
 </style>
