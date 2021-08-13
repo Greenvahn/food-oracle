@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'meal-dev',
+    title: 'food-oracle',
     htmlAttrs: {
       lang: 'en'
     },

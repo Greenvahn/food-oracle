@@ -6,7 +6,7 @@
       class="flex-column navbar-dark bg-dark"
     >
       <b-navbar-brand href="/" class="mx-auto">
-        MEAL PLANNER
+        FOOD ORACLE
       </b-navbar-brand>
       <b-nav id="navbarColor02">
         <b-nav-item active>
