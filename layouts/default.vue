@@ -15,6 +15,4 @@ export default {
 </script>
 
 <style>
-/* Loads bootswatch them here */
-@import 'bootswatch\dist\zephyr\bootstrap.min.css';
 </style>
