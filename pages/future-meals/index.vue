@@ -6,23 +6,24 @@
     <div class="mt-2">
       {{ response }}
     </div>
-    <DayCard :days="days" />
+    <CardList :days="days" :recipes="recipesList" />
   </div>
 </template>
 
 <script>
 import { toRefs, reactive } from '@vue/composition-api'
-import DayCard from '@/components/dayCard.vue'
+import CardList from '~/components/cardList.vue'
 import getData from '@/utils/fetch-data'
 import weekDays from '@/utils/weekDays'
 
 export default {
   components: {
-    DayCard
+    CardList
   },
   setup () {
     const state = reactive({
       response: [],
+      recipesList: [],
       error: null,
       fetching: true,
       days: weekDays
@@ -30,7 +31,7 @@ export default {
 
     const generateData = () => {
       getData(
-        `https://api.trello.com/1/boards/${process.env.TR_BOARD_ID}/lists?key=${process.env.TR_API_KEY}`,
+        `https://api.trello.com/1/boards/${process.env.TR_BOARD_ID}/cards?key=${process.env.TR_API_KEY}`,
         state
       )
     }
