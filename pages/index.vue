@@ -9,39 +9,25 @@
       <ButtonApp variant="primary" btn-style="mt-1" @click="onGenerate">
         Do something
       </ButtonApp>
-      <div v-show="!fetching" class="mt-2">
-        {{ response }}
-      </div>
     </div>
-
-    <DayCard v-show="!fetching" :days="days" />
   </div>
 </template>
 
 <script>
-import { toRefs, reactive, ref } from '@vue/composition-api'
+import { useRouter } from '@nuxtjs/composition-api'
 import ButtonApp from '@/components/UI/buttonApp.vue'
-import DayCard from '@/components/dayCard.vue'
-import getData from '@/utils/fetch-data'
-import weekDays from '@/utils/weekDays'
 
 export default {
   components: {
-    ButtonApp,
-    DayCard
+    ButtonApp
   },
   setup () {
-    const state = reactive({
-      response: [],
-      error: null,
-      fetching: true
-    })
+    const router = useRouter()
 
-    const days = ref(weekDays)
     const onGenerate = () => {
-      getData('https://geolocation-db.com/json/', state)
+      router.push('/future-meals/')
     }
-    return { ...toRefs(state), days, onGenerate }
+    return { onGenerate }
   }
 }
 </script>
