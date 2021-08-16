@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <DayCard :days="days" />
+    <DayCard v-show="!fetching" :days="days" />
   </div>
 </template>
 
