@@ -29,7 +29,10 @@ export default {
     })
 
     const generateData = () => {
-      getData('https://geolocation-db.com/json/', state)
+      getData(
+        `https://api.trello.com/1/boards/${process.env.TR_BOARD_ID}/lists?key=${process.env.TR_API_KEY}`,
+        state
+      )
     }
 
     // Generate data - manual trigger

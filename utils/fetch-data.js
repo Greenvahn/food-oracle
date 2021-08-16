@@ -1,6 +1,6 @@
 const getData = async (url, options) => {
   try {
-    const res = await fetch('https://geolocation-db.com/json/')
+    const res = await fetch(url)
     const json = await res.json()
     options.response = json
   } catch (error) {
