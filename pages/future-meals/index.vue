@@ -6,7 +6,7 @@
     <!-- <div class="mt-2">
       {{ response }}
     </div> -->
-    <CardList :days="days" :recipes="recipesList" />
+    <CardList :days="days" :recipes="recipesList" :labels-pool="labelsPool" />
   </div>
 </template>
 
@@ -24,6 +24,7 @@ export default {
     const state = reactive({
       response: [],
       recipesList: [],
+      labelsPool: [],
       error: null,
       fetching: true,
       days: weekDays

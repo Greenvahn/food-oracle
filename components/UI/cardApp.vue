@@ -10,19 +10,12 @@
       bg-variant="light"
       class="mb-4 text-center"
     >
-      <b-card-text>
-        With supporting text below as a natural lead-in to additional content.
-      </b-card-text>
-
+      <LabelList :labels="labels" />
       <div>
         <b-form>
-          <label
-            class="mr-sm-2"
-            for="inline-form-custom-select-pref"
-          >Preference</label>
           <b-form-select
             id="inline-form-custom-select-pref"
-            class="mb-3"
+            class="mb-3 mt-3"
             :options="[{ text: 'Choose...', value: null }, ...dataCards]"
             :value="null"
             @change="onChange($event)"
@@ -35,9 +28,16 @@
     </b-card>
   </div>
 </template>
+
 <script>
-import { reactive, ref } from '@vue/composition-api'
+import { ref } from '@vue/composition-api'
+import LabelList from '@/components/labelList.vue'
+// import Label from '@/components/UI/labels.vue'
+
 export default {
+  components: {
+    LabelList
+  },
   props: {
     day: {
       type: String,
@@ -52,18 +52,33 @@ export default {
       default () {
         return []
       }
+    },
+    labelsPool: {
+      type: Array,
+      default () {
+        return []
+      }
     }
   },
   setup (props) {
-    const dropOptions = reactive(['option 1', 'option 2', 'option 3'])
     const cardTitle = ref(null)
+    const labels = ref(null)
 
-    // const newMap = props.days.map(item => reactive([`cardTitle${item}`]))
+    const getLabels = (value) => {
+      if (value) {
+        // filter by card name
+        const labelArray = props.labelsPool.filter(item => item.card === value)
+        const [{ label }] = labelArray
+        labels.value = label
+      }
+    }
 
     const onChange = (value) => {
       cardTitle.value = value
+      getLabels(value)
     }
-    return { dropOptions, cardTitle, onChange }
+
+    return { cardTitle, onChange, labels }
   }
 }
 </script>
