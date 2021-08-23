@@ -5,7 +5,7 @@
       header-text-variant="white"
       header-tag="header"
       header-bg-variant="dark"
-      :title="cardTitle != null ? cardTitle : `Meal ${index + 1}`"
+      :title="cardTitle != null ? cardTitle : randomMeal(dataCards.length, dataCards)"
       style="max-width: 20rem;"
       bg-variant="light"
       class="mb-4 text-center"
@@ -30,9 +30,10 @@
 </template>
 
 <script>
-import { ref } from '@vue/composition-api'
+// import { ref, onBeforeMount, onMounted } from '@vue/composition-api'
+import { ref } from '@nuxtjs/composition-api'
 import LabelList from '@/components/labelList.vue'
-// import Label from '@/components/UI/labels.vue'
+import randomMeal from '@/utils/random-meal'
 
 export default {
   components: {
@@ -63,6 +64,7 @@ export default {
   setup (props) {
     const cardTitle = ref(null)
     const labels = ref(null)
+    // const route = useRoute()
 
     const getLabels = (value) => {
       if (value) {
@@ -78,7 +80,7 @@ export default {
       getLabels(value)
     }
 
-    return { cardTitle, onChange, labels }
+    return { cardTitle, onChange, labels, randomMeal }
   }
 }
 </script>
