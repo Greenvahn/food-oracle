@@ -16,13 +16,13 @@
           <b-form-select
             id="inline-form-custom-select-pref"
             class="mb-3 mt-3"
-            :options="[{ text: 'Choose...', value: null }, ...dataCards]"
+            :options="[{ text: 'Control your future ...', value: null }, ...dataCards]"
             :value="null"
             @change="onChange($event)"
           />
         </b-form>
       </div>
-      <b-button href="#" variant="primary">
+      <b-button href="#" variant="primary" @click="randomise">
         Ramdom
       </b-button>
     </b-card>
@@ -80,7 +80,13 @@ export default {
       getLabels(value)
     }
 
-    return { cardTitle, onChange, labels, randomMeal }
+    const randomise = () => {
+      const thisFood = randomMeal(props.dataCards.length, props.dataCards)
+      cardTitle.value = thisFood
+      getLabels(thisFood)
+    }
+
+    return { cardTitle, onChange, labels, randomMeal, randomise }
   }
 }
 </script>
