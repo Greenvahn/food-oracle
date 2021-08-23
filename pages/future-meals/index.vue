@@ -3,9 +3,9 @@
     <h3 class="text-center mt-5 p-3">
       Your meal plan
     </h3>
-    <div class="mt-2">
+    <!-- <div class="mt-2">
       {{ response }}
-    </div>
+    </div> -->
     <CardList :days="days" :recipes="recipesList" />
   </div>
 </template>
