@@ -30,7 +30,11 @@
 </template>
 
 <script>
-// import { ref, onBeforeMount, onMounted } from '@vue/composition-api'
+/**
+ * The card recipe basic component.
+ * @displayName CardApp
+ */
+
 import { ref } from '@nuxtjs/composition-api'
 import LabelList from '@/components/labelList.vue'
 import randomMeal from '@/utils/random-meal'
@@ -40,20 +44,28 @@ export default {
     LabelList
   },
   props: {
+    /**
+     * The day of the week
+     * @values Monday ... Sunday
+     */
     day: {
       type: String,
       default: ''
     },
-    index: {
-      type: Number,
-      default: 0
-    },
+    /**
+     * All the recipes available from the trello board
+     * @values Array of strings
+     */
     dataCards: {
       type: Array,
       default () {
         return []
       }
     },
+    /**
+     * All the labels available from the trello board
+     * @values Array of strings
+     */
     labelsPool: {
       type: Array,
       default () {
@@ -64,8 +76,9 @@ export default {
   setup (props) {
     const cardTitle = ref(null)
     const labels = ref(null)
-    // const route = useRoute()
-
+    /**
+     * Get card labels by passing title
+     */
     const getLabels = (value) => {
       if (value) {
         // filter by card name
@@ -74,12 +87,17 @@ export default {
         labels.value = label
       }
     }
-
+    /**
+     * Changes the title card based on dropdown selection
+     * Updates label cards based on the title
+     */
     const onChange = (value) => {
       cardTitle.value = value
       getLabels(value)
     }
-
+    /**
+     * Gets random title and updates card's label
+     */
     const randomise = () => {
       const thisFood = randomMeal(props.dataCards.length, props.dataCards)
       cardTitle.value = thisFood
