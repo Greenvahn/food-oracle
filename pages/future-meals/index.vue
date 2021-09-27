@@ -32,7 +32,11 @@ export default {
 
     const generateData = () => {
       getData(
-        `https://api.trello.com/1/boards/${process.env.TR_BOARD_ID}/cards?key=${process.env.TR_API_KEY}`,
+        `https://api.trello.com/1/boards/${process.env.TR_BOARD_ID}/cards?key=${
+          process.env.TR_USER_API_KEY
+        }${
+          process.env.TR_PRIVATE_AUTH_TOKEN ? `&token=${process.env.TR_PRIVATE_AUTH_TOKEN}` : ''
+        }`,
         state
       )
     }
