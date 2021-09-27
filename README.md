@@ -1,6 +1,9 @@
-# food-oracle
+# 🍜 food-oracle 
+<p>A simple meal planner using Trello boards with recipes. 
 
-## Build Setup
+This project is still under developent.</p>
+
+## 🎢 Build Setup
 
 ```bash
 # install dependencies
@@ -17,56 +20,38 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+For detailed explanation on how things work with Nuxt.js (Vue), check out the [documentation](https://nuxtjs.org).
 
-## Trello API
-http://www.trello.org/help.html
+---
 
-## Special Directories
+## 🌠 Trello Boards - Setup
+This app uses the Trello API to fecth information directly from the trello boards with recipes.In order to connect any board with this app you will need:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+* <b>A trello user API</b>. 
+    * <i>* You will need to be registered and logged in Trello in order to get one</i>.
+* <b>A trello board ID</b>. 
+    * It is visible as part of the any board URL
 
-### `assets`
+ After the intial installation, you will find an `.env.sample` file at the root project folder. Rename it to `.env`
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## .env
+```bash
+TR_USER_API_KEY = yourTrelloAPIgoeshere
+TR_PRIVATE_AUTH_TOKEN = privateBoardToken
+TR_BOARD_ID = boardID
+```
+> ⚠️ The `TR_AUTH_TOKEN` is only required if the board is private!
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+---
 
-### `components`
+## 🥑 Private Trello Boards
+<p>An user authorization is required from the trello board's owner if you are accessing a private board.</p>
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+<p>Request a token granting <b>read-only access forever</b> :</p>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+```bash 
+https://trello.com/1/authorize?key=substitutewithyourapplicationkey&name=My+Application&expiration=never&response_type=token
+```
 
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+### Trello API documentation
+Please refer to http://www.trello.org/help.html to know how to get an API KEY for development between other things.
