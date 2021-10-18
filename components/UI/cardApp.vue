@@ -22,7 +22,7 @@
           />
         </b-form>
       </div>
-      <b-button href="#" variant="primary" @click="randomise">
+      <b-button variant="info" @click="randomise">
         Ramdom
       </b-button>
     </b-card>

@@ -23,6 +23,7 @@ export default {
   setup () {
     const state = reactive({
       response: [],
+      fullCardList: [],
       recipesList: [],
       labelsPool: [],
       error: null,
