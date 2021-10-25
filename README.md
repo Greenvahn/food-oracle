@@ -51,6 +51,8 @@ TR_EXCLUDING_CARD = exludingKeyword
 ```
 > ⚠️ The `TR_AUTH_TOKEN` is only required if the board is private!
 
+> 🎯 `The TR_EXCLUDING_CARD` is used to filter out cards by title keywords. This is optional!
+
 ---
 
 ## 🥑 Private Trello Boards
