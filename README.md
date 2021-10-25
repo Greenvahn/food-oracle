@@ -32,6 +32,14 @@ This app uses the Trello API to fecth information directly from the trello board
 * <b>A trello board ID</b>. 
     * It is visible as part of the any board URL
 
+Optional parameters:
+
+* <b>A trello authentication token</b>. 
+    * This only applies to private boards.
+
+* <b>Excluding cards by name</b>. 
+    * This is totally optional. Remove it from your `.env` if not in use.
+
  After the intial installation, you will find an `.env.sample` file at the root project folder. Rename it to `.env`
 
 ## .env
@@ -39,8 +47,11 @@ This app uses the Trello API to fecth information directly from the trello board
 TR_USER_API_KEY = yourTrelloAPIgoeshere
 TR_PRIVATE_AUTH_TOKEN = privateBoardToken
 TR_BOARD_ID = boardID
+TR_EXCLUDING_CARD = exludingKeyword
 ```
 > ⚠️ The `TR_AUTH_TOKEN` is only required if the board is private!
+
+> 🎯 `The TR_EXCLUDING_CARD` is used to filter out cards by title keywords. This is optional!
 
 ---
 
