@@ -13,6 +13,10 @@ pids
 *.seed
 *.pid.lock
 
+# Firebase cache
+.firebase/
+*.firebase
+
 # local env files
 .env.local
 .env.*.local
