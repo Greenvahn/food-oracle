@@ -10,8 +10,6 @@
 <script>
 import { toRefs, reactive } from '@vue/composition-api'
 import CardList from '~/components/cardList.vue'
-// import getData from '@/utils/fetch-data'
-// import getData from '@/utils/dataWriter'
 import weekDays from '@/utils/weekDays'
 import dataRecipes from '@/data/master_data'
 
