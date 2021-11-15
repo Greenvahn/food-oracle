@@ -1,30 +1,41 @@
-const getData = async (url, options) => {
+require('dotenv').config()
+const path = require('path')
+const fs = require('fs')
+const fetch = require('node-fetch')
+
+const pathFile = path.join(__dirname, '../data/master_data.json')
+
+const getData = async (url) => {
   try {
     const res = await fetch(url)
     const json = await res.json()
-    options.response = json
-    options.fullCardList = options.response.map(card => card.name) // creates an array with ALL card recipes
+    const data = json.reduce((result, card) => {
+      // TR_EXCLUDING_CARD - if true, excludes recipes with the word defined in .env
+      if (
+        !process.env.TR_EXCLUDING_CARD ||
+        !card.name.includes(process.env.TR_EXCLUDING_CARD)
+      ) {
+        result.push({
+          title: card.name,
+          label: card.labels.map(item => ({ name: item.name, color: item.color }))
+        })
+      }
+      return result
+    }, [])
 
-    if (process.env.TR_EXCLUDING_CARD && process.env.TR_EXCLUDING_CARD.length > 0) {
-      options.recipesList = options.response.reduce((result, card) => { // creates an array excluding card recipes are not included in the food oracle.
-        if (!card.name.includes(process.env.TR_EXCLUDING_CARD)) {
-          result.push(card.name)
-        }
-        return result
-      }, [])
-    } else {
-      options.recipesList = options.fullCardList
-    }
-
-    options.labelsPool = options.response.map(card => ({
-      card: card.name,
-      label: card.labels
-    })) // creates an array wth id card + label cards
+    fs.writeFileSync(pathFile, JSON.stringify(data), { enconding: 'utf-8' })
   } catch (error) {
-    options.error = error
-  } finally {
-    options.fetching = false
+    // eslint-disable-next-line
+    console.log(`Something went wrong --> ${error}`)
   }
 }
 
-export default getData
+getData(
+  `https://api.trello.com/1/boards/${process.env.TR_BOARD_ID}/cards?key=${
+    process.env.TR_USER_API_KEY
+  }${
+    process.env.TR_PRIVATE_AUTH_TOKEN
+      ? `&token=${process.env.TR_PRIVATE_AUTH_TOKEN}`
+      : ''
+  }`
+)

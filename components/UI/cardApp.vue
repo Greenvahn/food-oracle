@@ -5,7 +5,7 @@
       header-text-variant="white"
       header-tag="header"
       header-bg-variant="dark"
-      :title="cardTitle != null ? cardTitle : randomMeal(dataCards.length, dataCards)"
+      :title="cardTitle"
       style="max-width: 20rem;"
       bg-variant="light"
       class="mb-4 text-center"
@@ -16,7 +16,7 @@
           <b-form-select
             id="inline-form-custom-select-pref"
             class="mb-3 mt-3"
-            :options="[{ text: 'Control your future ...', value: null }, ...dataCards]"
+            :options="[{ text: 'Control your future ...', value: null }, ... getRecipeList()]"
             :value="null"
             @change="onChange($event)"
           />
@@ -61,16 +61,6 @@ export default {
       default () {
         return []
       }
-    },
-    /**
-     * All the labels available from the trello board
-     * @values Array of strings
-     */
-    labelsPool: {
-      type: Array,
-      default () {
-        return []
-      }
     }
   },
   setup (props) {
@@ -81,8 +71,7 @@ export default {
      */
     const getLabels = (value) => {
       if (value) {
-        // filter by card name
-        const labelArray = props.labelsPool.filter(item => item.card === value)
+        const labelArray = props.dataCards.filter(card => card.title === value)
         const [{ label }] = labelArray
         labels.value = label
       }
@@ -103,8 +92,20 @@ export default {
       cardTitle.value = thisFood
       getLabels(thisFood)
     }
+    /**
+     * Gets full list of recipes
+     */
+    const getRecipeList = () => {
+      const list = props.dataCards.map(item => item.title)
+      return list
+    }
 
-    return { cardTitle, onChange, labels, randomMeal, randomise }
+    /**
+     * Manual randomise when loads the component.
+     */
+    randomise()
+
+    return { cardTitle, onChange, labels, randomMeal, randomise, getRecipeList, getLabels }
   }
 }
 </script>

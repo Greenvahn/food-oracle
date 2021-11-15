@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Vegan katsu curry",
+    "label": [{ "name": "Asian style", "color": "orange" }]
+  },
+  {
+    "title": "Cauliflower and chickpea masala",
+    "label": [{ "name": "Indian", "color": "pink" }]
+  },
+  { "title": "Risotto", 
+    "label": [{ "name": "Rice", "color": "blue" }] },
+  {
+    "title": "Homemade Ravioli",
+    "label": [{ "name": "Pasta", "color": "yellow" }]
+  },
+  {
+    "title": "Gnocchi bake with squash",
+    "label": [{ "name": "Potato", "color": "purple" }]
+  },
+  {
+    "title": "Noodle or Rice Bowl with tofu and Siracha dressing",
+    "label": [{ "name": "Veggies", "color": "lime" }]
+  },
+  {
+    "title": "Veggie burgers",
+    "label": [{ "name": "Cheating", "color": "red" }]
+  },
+  { "title": "Tacos", "label": [{ "name": "Other", "color": "black" }] },
+  {
+    "title": "Creamy pumpkin pasta",
+    "label": [
+      { "name": "Pasta", "color": "yellow" },
+      { "name": "New recipe", "color": "black" }
+    ]
+  },
+  {
+    "title": "Okra and tomato stew",
+    "label": [{ "name": "New recipe", "color": "black" }]
+  }
+]
