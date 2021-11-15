@@ -4,86 +4,11 @@
     "label": [{ "name": "Asian style", "color": "orange" }]
   },
   {
-    "title": "Bibimbap",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  {
-    "title": "Pad thai",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  {
-    "title": "Tofu cho mein",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  { "title": "Sushi", "label": [{ "name": "Asian style", "color": "orange" }] },
-  {
-    "title": "Japanese style aubergine",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  {
-    "title": "Korean baked cauliflower wings",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  {
-    "title": "Eggs baked in Kimchi fried rice",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  {
-    "title": "Sweet potato and chickpea curry",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  {
-    "title": "Asian style noodle salad",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  {
-    "title": "Miso soup",
-    "label": [{ "name": "Asian style", "color": "orange" }]
-  },
-  { "title": "Katsu Curry sauce", "label": [] },
-  {
     "title": "Cauliflower and chickpea masala",
     "label": [{ "name": "Indian", "color": "pink" }]
   },
-  {
-    "title": "Paneer butter masala",
-    "label": [{ "name": "Indian", "color": "pink" }]
-  },
-  { "title": "Dal Tadka", "label": [{ "name": "Indian", "color": "pink" }] },
-  { "title": "Dal Makhani", "label": [{ "name": "Indian", "color": "pink" }] },
-  { "title": "Risotto", "label": [{ "name": "Rice", "color": "blue" }] },
-  {
-    "title": "Veggie fried rice",
-    "label": [{ "name": "Rice", "color": "blue" }]
-  },
-  {
-    "title": "Vegan chili con carne",
-    "label": [{ "name": "Rice", "color": "blue" }]
-  },
-  {
-    "title": "Veggie bolognese",
-    "label": [{ "name": "Pasta", "color": "yellow" }]
-  },
-  {
-    "title": "Veggie lasagna",
-    "label": [{ "name": "Pasta", "color": "yellow" }]
-  },
-  {
-    "title": "Tofu mushroom stroganoff pasta",
-    "label": [{ "name": "Pasta", "color": "yellow" }]
-  },
-  {
-    "title": "Pasta With Caramelized Cabbage, Anchovies and Bread Crumbs",
-    "label": [{ "name": "Pasta", "color": "yellow" }]
-  },
-  {
-    "title": "Canelloni with spinach and ricotta",
-    "label": [{ "name": "Pasta", "color": "yellow" }]
-  },
-  {
-    "title": "Kaesespaetzle",
-    "label": [{ "name": "Pasta", "color": "yellow" }]
-  },
+  { "title": "Risotto", 
+    "label": [{ "name": "Rice", "color": "blue" }] },
   {
     "title": "Homemade Ravioli",
     "label": [{ "name": "Pasta", "color": "yellow" }]
@@ -93,94 +18,23 @@
     "label": [{ "name": "Potato", "color": "purple" }]
   },
   {
-    "title": "Sausage & sweet potato tray bake",
-    "label": [{ "name": "Potato", "color": "purple" }]
-  },
-  {
-    "title": "Mashed potato",
-    "label": [{ "name": "Potato", "color": "purple" }]
-  },
-  {
-    "title": "Soft parmesan polenta with roast balsamic vegetables",
-    "label": [{ "name": "Polenta", "color": "purple" }]
-  },
-  {
-    "title": "Creamy polenta with mushrooms",
-    "label": [{ "name": "Polenta", "color": "purple" }]
-  },
-  {
-    "title": "Spanish Omelette",
-    "label": [{ "name": "Potato", "color": "purple" }]
-  },
-  {
-    "title": "Potato bake with cheesy cauliflower",
-    "label": [{ "name": "Potato", "color": "purple" }]
-  },
-  {
-    "title": "Gnocchi alla Romana",
-    "label": [{ "name": "Polenta", "color": "purple" }]
-  },
-  {
     "title": "Noodle or Rice Bowl with tofu and Siracha dressing",
     "label": [{ "name": "Veggies", "color": "lime" }]
   },
   {
-    "title": "Brochetas de verduras",
-    "label": [{ "name": "Veggies", "color": "lime" }]
-  },
-  {
-    "title": "Baked sweet potato w chickpeas",
-    "label": [{ "name": "Veggies", "color": "lime" }]
-  },
-  {
-    "title": "Veggie Casserole",
-    "label": [{ "name": "Veggies", "color": "lime" }]
-  },
-  {
-    "title": "Veggie moussaka",
-    "label": [{ "name": "Veggies", "color": "lime" }]
-  },
-  { "title": "Ratatouille", "label": [{ "name": "Veggies", "color": "lime" }] },
-  { "title": "Burritos", "label": [{ "name": "Veggies", "color": "lime" }] },
-  {
-    "title": "Filled peppers",
-    "label": [{ "name": "Veggies", "color": "lime" }]
-  },
-  {
-    "title": "Baked filled aubergine ",
-    "label": [{ "name": "Veggies", "color": "lime" }]
-  },
-  { "title": "Pizza", "label": [{ "name": "Cheating", "color": "red" }] },
-  {
     "title": "Veggie burgers",
-    "label": [{ "name": "Cheating", "color": "red" }]
-  },
-  { "title": "Curry wurst", "label": [{ "name": "Cheating", "color": "red" }] },
-  {
-    "title": "Kloesse with cabbage",
     "label": [{ "name": "Cheating", "color": "red" }]
   },
   { "title": "Tacos", "label": [{ "name": "Other", "color": "black" }] },
   {
-    "title": "Lentil, chickpea, sweet potato soup",
-    "label": [{ "name": "Other", "color": "black" }]
-  },
-  {
-    "title": "Veggie barbecue",
-    "label": [{ "name": "Other", "color": "black" }]
-  },
-  { "title": "Tiramisu", "label": [] },
-  { "title": "Lemon cheese cake", "label": [] },
-  { "title": "Swiss chocolate & walnut cake", "label": [] },
-  {
     "title": "Creamy pumpkin pasta",
-    "label": [{ "name": "Pasta", "color": "yellow" }]
+    "label": [
+      { "name": "Pasta", "color": "yellow" },
+      { "name": "New recipe", "color": "black" }
+    ]
   },
-  { "title": "Okra and tomato stew", "label": [] },
-  { "title": "Korean Kimchi Pancakes", "label": [] },
-  { "title": "Shakshuka", "label": [] },
-  { "title": "Polenta pizza", "label": [] },
-  { "title": "Samosas", "label": [] },
-  { "title": "Paella", "label": [] },
-  { "title": "Potato & Mushroom pierogi", "label": [] }
+  {
+    "title": "Okra and tomato stew",
+    "label": [{ "name": "New recipe", "color": "black" }]
+  }
 ]
