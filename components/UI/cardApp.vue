@@ -6,9 +6,9 @@
       header-tag="header"
       header-bg-variant="dark"
       :title="cardTitle"
-      style="max-width: 20rem;"
       bg-variant="light"
-      class="mb-4 text-center"
+      class="mx-auto mb-4 text-center"
+      style="max-width: 20rem; height: 20rem"
     >
       <LabelList :labels="labels" />
       <div>
