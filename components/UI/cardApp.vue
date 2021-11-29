@@ -5,7 +5,7 @@
       bg-variant="light"
       style="max-width: 20rem; height: 20rem"
     >
-      <header class="card-header bg-dark text-white">
+      <header class="card-header bg-white">
         {{ day }}
       </header>
       <div class="card-body d-flex flex-column justify-content-around">
@@ -24,8 +24,8 @@
             />
           </b-form>
         </div>
-        <b-button variant="info" @click="randomise">
-          Ramdom
+        <b-button variant="primary" @click="randomise">
+          Try my luck!
         </b-button>
       </div>
     </div>
@@ -112,3 +112,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.card {
+  border: 1px solid rgba($color: #1a2275, $alpha: 0.1) !important;
+}
+</style>
