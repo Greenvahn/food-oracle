@@ -6,7 +6,7 @@
       class="flex-column navbar-light bg-light"
     >
       <b-navbar-brand href="/" class="mx-auto">
-        <img class="nav-bar-logo" src="~/static/food-oracle-logo.png" alt="food-oracle-logo">
+        <img class="nav-bar-logo" width="100%" src="~/static/food-oracle-logo.png" alt="food-oracle-logo">
       </b-navbar-brand>
       <b-nav id="navbarColor02">
         <b-nav-text class="nav-link">
