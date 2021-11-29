@@ -1,31 +1,34 @@
 <template>
   <div>
-    <b-card
-      :header="day"
-      header-text-variant="white"
-      header-tag="header"
-      header-bg-variant="dark"
-      :title="cardTitle"
-      style="max-width: 20rem;"
+    <div
+      class="card mx-auto mb-4 text-center"
       bg-variant="light"
-      class="mb-4 text-center"
+      style="max-width: 20rem; height: 20rem"
     >
-      <LabelList :labels="labels" />
-      <div>
-        <b-form>
-          <b-form-select
-            id="inline-form-custom-select-pref"
-            class="mb-3 mt-3"
-            :options="[{ text: 'Control your future ...', value: null }, ... getRecipeList()]"
-            :value="null"
-            @change="onChange($event)"
-          />
-        </b-form>
+      <header class="card-header bg-dark text-white">
+        {{ day }}
+      </header>
+      <div class="card-body d-flex flex-column justify-content-around">
+        <h4 class="card-title">
+          {{ cardTitle }}
+        </h4>
+        <LabelList :labels="labels" />
+        <div>
+          <b-form>
+            <b-form-select
+              id="inline-form-custom-select-pref"
+              class="mb-3 mt-3"
+              :options="[{ text: 'Control your future ...', value: null }, ... getRecipeList()]"
+              :value="null"
+              @change="onChange($event)"
+            />
+          </b-form>
+        </div>
+        <b-button variant="info" @click="randomise">
+          Ramdom
+        </b-button>
       </div>
-      <b-button variant="info" @click="randomise">
-        Ramdom
-      </b-button>
-    </b-card>
+    </div>
   </div>
 </template>
 

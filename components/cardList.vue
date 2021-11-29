@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-card-group class="d-flex flex-row justify-content-center">
+    <b-card-group deck class="justify-content-sm-center">
       <div v-for="(day, index) in days" :key="index" class="ml-3 mr-3">
         <CardApp :day="day" :data-cards="recipes" />
       </div>

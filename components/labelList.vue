@@ -1,11 +1,11 @@
 <template>
-  <b-list-group horizontal="md">
+  <div class="d-flex flex-row justify-content-center">
     <div v-for="(label, indexLabel) in labels" :key="indexLabel">
       <b-badge :class="label.color" class="mr-1 ml-1">
         {{ label.name }}
       </b-badge>
     </div>
-  </b-list-group>
+  </div>
 </template>
 
 <script>
