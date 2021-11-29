@@ -1,22 +1,24 @@
 <template>
   <div>
     <b-navbar
-      type="dark"
-      variant="dark"
-      class="flex-column navbar-dark bg-dark"
+      type="light"
+      variant="light"
+      class="flex-column navbar-light bg-light"
     >
       <b-navbar-brand href="/" class="mx-auto">
-        FOOD ORACLE
+        <img class="nav-bar-logo" width="100%" src="~/static/food-oracle-logo.png" alt="food-oracle-logo">
       </b-navbar-brand>
       <b-nav id="navbarColor02">
-        <b-nav-item active>
-          Active
-        </b-nav-item>
-        <b-nav-item>Link</b-nav-item>
-        <b-nav-item>Another Link</b-nav-item>
-        <b-nav-item disabled>
-          Disabled
-        </b-nav-item>
+        <b-nav-text class="nav-link">
+          <a href="https://github.com/Greenvahn" target="_blank">
+            Github
+          </a>
+        </b-nav-text>
+        <b-nav-text class="nav-link">
+          <a href="https://greenslash.dev/" target="_blank">
+            Made by Greenvahn
+          </a>
+        </b-nav-text>
       </b-nav>
     </b-navbar>
   </div>
@@ -24,8 +26,25 @@
 
 <style lang="scss" scoped>
 .nav-link {
-  &:hover {
-    color: white;
+  color: #1a2275;
+  font-weight: bold;
+  a {
+    opacity: 0.5;
+    color: #1a2275;
+    text-decoration: none;
+    &:hover {
+    color: #1a2275 !important;
+    opacity: 1;
+    }
   }
+
+}
+
+.nav-bar-logo {
+  max-width: 600px;
+}
+
+.navbar.bg-light {
+    border: 1px solid rgba(0,0,0,.1);
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h3 class="text-center mt-5 p-3">
-      Your meal plan
+    <h3 class="text-center m-5 p-3">
+      The oracle has spoken!
     </h3>
     <CardList :days="days" :recipes="recipesList" />
   </div>
