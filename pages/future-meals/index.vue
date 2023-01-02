@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="text-center m-5 p-3">
+    <h3 class="text-center m-5 p-3 jp-robot-font">
       The oracle has spoken!
     </h3>
     <CardList :days="days" :recipes="recipesList" />

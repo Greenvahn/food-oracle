@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "jp-robot";
+  src: local("Oxygen"),
+   url(~assets/fonts/Japanese-Robot.ttf) format("truetype");
+}
+
+.jp-robot-font {
+  font-family: "jp-robot";
+}

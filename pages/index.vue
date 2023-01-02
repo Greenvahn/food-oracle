@@ -1,12 +1,16 @@
 <template>
   <div>
-    <p class="text-center mt-5 p-3">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    <p class="text-center p-3 intro-text">
+      Lady Onions could tell you about your next love but instead will tell you about what will you eat the next week!
+    </p>
+
+    <p class="text-center mt-3 jp-robot-font">
+      Lady Onions is here to help!
     </p>
 
     <div class="text-center mb-5">
-      <ButtonApp variant="primary" btn-style="mt-1" @click="onGenerate">
-        Show me the future!
+      <ButtonApp variant="primary" btn-style="rounded-2" @click="onGenerate">
+        Show my future meals!
       </ButtonApp>
     </div>
   </div>
@@ -30,3 +34,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.intro-text {
+  display: flex;
+  max-width: 700px;
+  margin: 30px auto 0 auto;
+}
+</style>
