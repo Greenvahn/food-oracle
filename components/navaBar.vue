@@ -1,12 +1,10 @@
 <template>
   <div>
     <b-navbar
-      type="light"
-      variant="light"
-      class="flex-column navbar-light bg-light"
+      class="flex-column navbar-light"
     >
       <b-navbar-brand href="/" class="mx-auto">
-        <img class="nav-bar-logo" width="100%" src="~/static/food-oracle-logo.png" alt="food-oracle-logo">
+        <img class="nav-bar-logo" width="70%" src="~/static/food-oracle-banner.png" alt="food-oracle-logo">
       </b-navbar-brand>
       <b-nav id="navbarColor02">
         <b-nav-text class="nav-link">
@@ -42,9 +40,12 @@
 
 .nav-bar-logo {
   max-width: 600px;
+  margin: 0 auto;
+  display: flex;
 }
 
-.navbar.bg-light {
-    border: 1px solid rgba(0,0,0,.1);
+.navbar.navbar-light {
+    border: 1px solid #1a2275;
+    background-color: #1a22751f;
 }
 </style>

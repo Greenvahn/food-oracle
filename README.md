@@ -5,6 +5,8 @@ This project is still under developent.</p>
 
 ## 🎢 Build Setup
 
+Requires **node 16x**
+
 ```bash
 # install dependencies
 $ yarn install
